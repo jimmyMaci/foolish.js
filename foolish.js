@@ -4,10 +4,23 @@ var Foolish = function() {
 	self.getIndex = _getIndex;
 	self.getNextIndex = _getNextIndex;
 	self.getPreviousIndex = _getPreviousIndex;
+	self.isLast = _isLast;
+	self.isFist = _isFist;
+	
+	function _isLast(array, element) {
+		var lastIndex = array.length-1;
+		var indexOfElement = array.indexOf(element);
+		return indexOfElement === lastIndex;
+	}
+	
+	 function _isFist(array, element) {
+		var indexOfElement = array.indexOf(element);
+		return indexOfElement === 0;
+	}
 		  
 	function _getIndex(array, element) {
 	  return array.indexOf(element);
-	};
+	}
 	
 	function _getNextIndex(array, element) {	
 		var lastIndex = array.length-1;
@@ -20,7 +33,7 @@ var Foolish = function() {
 		}
 		var nextIndex = indexOfElement + 1;
 		return nextIndex;
-	};
+	}
 	
 			
 	function _getPreviousIndex(array, element) {	
@@ -34,18 +47,6 @@ var Foolish = function() {
 		}
 		var previousIndex = indexOfElement - 1;
 		return previousIndex;
-	};
-	
-			
-	function _isLast(array, element) {
-		var lastIndex = array.length-1;
-		var indexOfElement = array.indexOf(element);
-		return indexOfElement === lastIndex;
 	}
-	
-	 function _isFist(array, element) {
-		var indexOfElement = array.indexOf(element);
-		return indexOfElement === 0;
-	}
-	
+
 };
