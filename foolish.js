@@ -1,8 +1,13 @@
 var Foolish = function() {
 	
 	var self = this;
-	self.getNextIndex = _getNextIndex;
 	self.getIndex = _getIndex;
+	self.getNextIndex = _getNextIndex;
+	self.getPreviousIndex = _getPreviousIndex;
+		  
+	function _getIndex(array, element) {
+	  return array.indexOf(element);
+	};
 	
 	function _getNextIndex(array, element) {	
 		var lastIndex = array.length-1;
@@ -17,10 +22,18 @@ var Foolish = function() {
 		return nextIndex;
 	};
 	
-	  
-	  function _getIndex(array, element) {
-	  	return array.indexOf(element);
-	  };
-	
+			
+	function _getPreviousIndex(array, element) {	
+		var lastIndex = array.length-1;
+		var indexOfElement = _getIndex(array, element);
+		if(indexOfElement === -1) {
+			return -1;
+		}
+		if(indexOfElement === 0) {
+			return lastIndex;
+		}
+		var previousIndex = indexOfElement - 1;
+		return previousIndex;
+	};
 	
 };
