@@ -36,4 +36,16 @@ var Foolish = function() {
 		return previousIndex;
 	};
 	
+			
+	function _isLast(array, element) {
+		var lastIndex = array.length-1;
+		var indexOfElement = array.indexOf(element);
+		return indexOfElement === lastIndex;
+	}
+	
+	 function _isFist(array, element) {
+		var indexOfElement = array.indexOf(element);
+		return indexOfElement === 0;
+	}
+	
 };
