@@ -60,5 +60,16 @@ var Foolish = function() {
 		}
 		return nextIndexes;
 	}
+	
+	function _getPreviousIndexes(array, element, count) {	
+		var previousIndexes = [];
+		var currentElement = element;
+		for(i = 0; i < count; i++) {
+			var previousIndex = _getPreviousIndex(array, currentElement);
+			previousIndexes.push(previousIndex);
+			currentElement = array[previousIndex];
+		}
+		return previousIndexes;
+	}
 
 };
