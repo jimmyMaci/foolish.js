@@ -48,5 +48,17 @@ var Foolish = function() {
 		var previousIndex = indexOfElement - 1;
 		return previousIndex;
 	}
+	
+		
+	function _getNextIndexes(array, element, count) {	
+		var nextIndexes = [];
+		var currentElement = element;
+		for(i = 0; i < count; i++) {
+			var nextIndex = _getNextIndex(array, currentElement);
+			nextIndexes.push(nextIndex);
+			currentElement = array[nextIndex];
+		}
+		return nextIndexes;
+	}
 
 };
