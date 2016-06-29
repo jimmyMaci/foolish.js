@@ -40,12 +40,10 @@ QUnit.test("isFirst test", function (assert) {
 	
 QUnit.test("getNextIndexes test", function (assert) {
     var nextIndexes = foolish.getNextIndexes(array, 3, 2);
-	console.log(nextIndexes);
 	assert.deepEqual( nextIndexes, [3,4], "nextIndexes should be equal" );
 });
 
 QUnit.test("getPreviousIndexes test", function (assert) {
     var previousIndexes = foolish.getPreviousIndexes(array, 3, 2);
-	console.log(previousIndexes);
 	assert.deepEqual( previousIndexes, [1,0], "previousIndexes should be equal" );
 });
