@@ -4,6 +4,8 @@ var Foolish = function() {
 	self.getIndex = _getIndex;
 	self.getNextIndex = _getNextIndex;
 	self.getPreviousIndex = _getPreviousIndex;
+	self.getNextIndexes = _getNextIndexes;
+	self.getPreviousIndexes = _getPreviousIndexes;
 	self.isLast = _isLast;
 	self.isFirst = _isFirst;
 	
