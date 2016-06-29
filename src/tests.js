@@ -37,5 +37,9 @@ QUnit.test("isFirst test", function (assert) {
     first = foolish.isFirst(array, 1);
     assert.ok(first, 'isFirst passed');
 });
-
-
+	
+QUnit.test("getNextIndexes test", function (assert) {
+    var nextIndexes = foolish.getNextIndexes(array, 3, 2);
+	console.log(nextIndexes);
+	assert.deepEqual( nextIndexes, [3,4], "nextIndexes should be equal" );
+});
