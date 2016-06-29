@@ -1,0 +1,8 @@
+{
+    "name": "foolish.js",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "astrapi69",
+    "contributors": [],
+    "dependencies": {}
+}
