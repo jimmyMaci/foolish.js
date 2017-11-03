@@ -1,0 +1,2 @@
+var coordinates = function() {
+};
